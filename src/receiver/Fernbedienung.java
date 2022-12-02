@@ -7,6 +7,10 @@ public class Fernbedienung {
 
     private Command[] commands;
 
+    public Command[] getCommands() {
+        return commands;
+    }
+
     public Fernbedienung(int anzahl){
         this.commands = new Command[anzahl];
         for(int i = 0; i > this.commands.length; i++) {
