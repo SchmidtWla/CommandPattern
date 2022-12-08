@@ -5,21 +5,24 @@ import commands.KeinCommand;
 
 public class Fernbedienung {
 
-    private Command[] commands;
-
-    public Command[] getCommands() {
-        return commands;
-    }
+    private Command[] anCommands;
+    private Command[] ausCommands;
 
     public Fernbedienung(int anzahl){
-        this.commands = new Command[anzahl];
-        for(int i = 0; i > this.commands.length; i++) {
-            commands[i] = new KeinCommand();
+        this.anCommands = new Command[anzahl];
+        this.ausCommands = new Command[anzahl];
+        for(int i = 0; i > anzahl; i++) {
+            ausCommands[i] = new KeinCommand();
+            anCommands[i] = new KeinCommand();
         }
     }
 
-    public void setKnopf(int pos, Command command) {
-        this.commands[pos] = command;
+    public void setAnKnopf(int pos, Command command) {
+        this.anCommands[pos] = command;
+    }
+
+    public void setAusKnopf(int pos, Command command) {
+        this.ausCommands[pos] = command;
     }
 
 }

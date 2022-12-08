@@ -19,4 +19,14 @@ public class GarageRunterCommand implements Command {
     public void undo() {
         befehlsZiel.hoch();
     }
+
+    @Override
+    public void redo() {
+
+    }
+
+    @Override
+    public int timeNeededInSek() {
+        return 0;
+    }
 }

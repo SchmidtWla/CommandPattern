@@ -7,6 +7,7 @@ public class StereoanlageCDAbspielenCommand implements Command {
     Stereoanlage anlage;
 
     public StereoanlageCDAbspielenCommand(Stereoanlage anlage) {
+
         this.anlage = anlage;
     }
 
@@ -18,5 +19,15 @@ public class StereoanlageCDAbspielenCommand implements Command {
     @Override
     public void undo() {
         this.anlage.stoppePlayback();
+    }
+
+    @Override
+    public void redo() {
+
+    }
+
+    @Override
+    public int timeNeededInSek() {
+        return 0;
     }
 }

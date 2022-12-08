@@ -19,4 +19,14 @@ public class StereoanlageAnCommand implements Command {
     public void undo() {
         this.anlage.ausschalten();
     }
+
+    @Override
+    public void redo() {
+
+    }
+
+    @Override
+    public int timeNeededInSek() {
+        return 0;
+    }
 }

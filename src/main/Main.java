@@ -20,19 +20,16 @@ public class Main {
         Stereoanlage anlage = new Stereoanlage();
 
         Fernbedienung fernbedienung = new Fernbedienung(10);
-        fernbedienung.setKnopf(0, new GarageHochCommand(garage));
-        fernbedienung.setKnopf(1, new GarageRunterCommand(garage));
-        fernbedienung.setKnopf(2, new LichtAnCommand(licht));
-        fernbedienung.setKnopf(3, new LichtAusCommand(licht));
-        fernbedienung.setKnopf(4, new StereoanlageAnCommand(anlage));
-        fernbedienung.setKnopf(5, new StereoanlageAusCommand(anlage));
-        fernbedienung.setKnopf(6, new StereoanlageCDAbspielenCommand(anlage));
-        fernbedienung.setKnopf(7, new StereoanlageCDStoppenCommand(anlage));
-        fernbedienung.setKnopf(8, new StereoanlageLautstaerkeHochCommand(anlage));
-        fernbedienung.setKnopf(9, new StereoanlageLautstaerkeRunterCommand(anlage));
+        fernbedienung.setAnKnopf(0, new GarageHochCommand(garage));
+        fernbedienung.setAusKnopf(1, new GarageRunterCommand(garage));
+        fernbedienung.setAnKnopf(2, new LichtAnCommand(licht));
+        fernbedienung.setAusKnopf(3, new LichtAusCommand(licht));
+        fernbedienung.setAnKnopf(4, new StereoanlageAnCommand(anlage));
+        fernbedienung.setAusKnopf(5, new StereoanlageAusCommand(anlage));
+        fernbedienung.setAnKnopf(6, new StereoanlageCDAbspielenCommand(anlage));
+        fernbedienung.setAusKnopf(7, new StereoanlageCDStoppenCommand(anlage));
+        fernbedienung.setAnKnopf(8, new StereoanlageLautstaerkeHochCommand(anlage));
+        fernbedienung.setAusKnopf(9, new StereoanlageLautstaerkeRunterCommand(anlage));
 
-        for (int i = 0; i < fernbedienung.getCommands().length; i++) {
-            fernbedienung.getCommands()[i].execute();
-        }
     }
 }

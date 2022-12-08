@@ -8,6 +8,7 @@ public class GarageHochCommand implements Command {
     private Garage befehlsZiel;
 
     public GarageHochCommand(Garage garage) {
+
         this.befehlsZiel = garage;
     }
     @Override
@@ -18,6 +19,16 @@ public class GarageHochCommand implements Command {
     @Override
     public void undo() {
         befehlsZiel.runter();
+    }
+
+    @Override
+    public void redo() {
+
+    }
+
+    @Override
+    public int timeNeededInSek() {
+        return 0;
     }
 
 }

@@ -19,4 +19,14 @@ public class StereoanlageCDStoppenCommand implements Command {
     public void undo() {
         this.anlage.spieleAb();
     }
+
+    @Override
+    public void redo() {
+
+    }
+
+    @Override
+    public int timeNeededInSek() {
+        return 0;
+    }
 }

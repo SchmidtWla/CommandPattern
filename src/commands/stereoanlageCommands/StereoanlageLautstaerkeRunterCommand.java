@@ -19,4 +19,14 @@ public class StereoanlageLautstaerkeRunterCommand implements Command {
     public void undo() {
         this.anlage.setLautstaerke(this.anlage.getLautstaerke() + 1);
     }
+
+    @Override
+    public void redo() {
+
+    }
+
+    @Override
+    public int timeNeededInSek() {
+        return 0;
+    }
 }

@@ -20,4 +20,14 @@ public class LichtAusCommand implements Command {
     public void undo() {
         licht.setLichtAn();
     }
+
+    @Override
+    public void redo() {
+
+    }
+
+    @Override
+    public int timeNeededInSek() {
+        return 0;
+    }
 }
