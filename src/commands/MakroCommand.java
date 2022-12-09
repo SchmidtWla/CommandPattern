@@ -4,8 +4,11 @@ public class MakroCommand implements Command{
 
     private Command[] makroCommand;
 
-    public MakroCommand(Command[] commands) {
-        this.makroCommand = commands;
+    public MakroCommand(Command ... commands){
+        this.makroCommand = new Command[commands.length];
+        for(int i = 0; i < makroCommand.length; i++) {
+            makroCommand[i] = commands[i];
+        }
     }
 
     @Override
@@ -19,5 +22,15 @@ public class MakroCommand implements Command{
     @Override
     public void undo() {
 
+    }
+
+    @Override
+    public void redo() {
+
+    }
+
+    @Override
+    public int timeNeededInSek() {
+        return 0;
     }
 }
